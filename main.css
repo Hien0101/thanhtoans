@@ -1,0 +1,166 @@
+.pay-money {
+  padding: 2%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pay-onetitle {
+  width: 60%;
+}
+.pay_onetitle-secondtime {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pay_secondtime-onelist {
+  width: 100%;
+}
+.pay_secondtime-onelist {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.pay-suborder {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.pay-twotitle {
+  width: 40%;
+  border-left: 1px solid #807f7f;
+}
+.pay-content {
+  font-size: 35px;
+  padding-left: 11.5%;
+  color: rgb(50, 137, 236);
+}
+.pay_secondtime-modor {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.pay_moder-dirver,
+.fa-user-circle-o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.payer,
+.pay-addresssever1::after {
+  height: 30px;
+  padding-left: 2%;
+}
+.seon-message {
+  height: 70px;
+  padding-left: 2%;
+}
+.pay-addressspaye3,
+.pay-addresssever2 {
+  border: none;
+  background: #d8d8d8;
+}
+.pay-addresssever1 {
+  border: none;
+}
+
+.consaigon-funter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #6d6f6d;
+}
+.fa-caret-down {
+  padding-right: 2%;
+}
+.onemore-content,
+.severonetime-content {
+  font-size: 25px;
+  font-weight: 600;
+}
+.pay_twolist-twomore {
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: aquamarine;
+  font-size: 20px;
+}
+.pay_secondtime-twolist {
+  width: 30%;
+}
+.threemore-severtwotime {
+  height: 50px;
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-size: 20px;
+  border: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.severtwotime-content {
+  padding-left: 2%;
+}
+.sayertime {
+  background: #d8d8d8;
+}
+.twotitle-onepause {
+  margin: 3% 0;
+  font-size: 25px;
+  border-top: 1px solid black;
+  padding: 3% 0;
+  border-bottom: 1px solid black;
+  width: 60%;
+  text-align: center;
+}
+.product-list {
+  height: 400px;
+  width: 60%;
+  margin: 3%;
+  border-bottom: 1px solid black;
+}
+.driver-content {
+  color: rgb(32, 112, 231);
+}
+.twotitle-sale {
+  margin: 3%;
+  width: 60%;
+  border-bottom: 1px solid black;
+  padding: 0 0 3%;
+}
+.pay-saleer {
+  height: 50px;
+  width: 70%;
+}
+.twotitle-user {
+  height: 56px;
+  width: 27%;
+}
+.twotitle-endding {
+  margin: 3%;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.twotitle-return {
+  height: 50px;
+  color: rgb(47, 76, 243);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.twotitle-muangay {
+  background: rgb(7 136 255 / 76%);
+  color: #fff;
+  border: none;
+  width: 30%;
+  font-size: 18px;
+}
+.error-message,
+.error-name,
+.error-addresssever1 {
+  color: red;
+  font-size: 15px;
+}
