@@ -58,9 +58,11 @@
 .pay-addresssever2 {
   border: none;
   background: #d8d8d8;
+  width: 100%;
 }
 .pay-addresssever1 {
   border: none;
+  width: 100%;
 }
 
 .consaigon-funter {
@@ -96,8 +98,23 @@
   font-size: 20px;
   border: 1px solid #c4c4c4;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+.severthreetime-content {
+  height: 16px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.severthreetime-content:hover {
+  color: rgb(41, 44, 44);
+  background: aqua;
+  border-radius: 20px;
 }
 
 .severtwotime-content {
