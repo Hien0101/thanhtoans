@@ -60,8 +60,21 @@ if (cartItems.length === 0) {
     .join("");
 }
 */
-const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
 
+function getCartFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const cart = params.get("cart");
+  if (cart) {
+    try {
+      return JSON.parse(decodeURIComponent(cart));
+    } catch (e) {
+      return [];
+    }
+  }
+  return [];
+}
+
+const cartItems = getCartFromUrl();
 const cartList = document.getElementById("cart-list");
 if (cartItems.length === 0) {
   cartList.innerHTML = "<p>Chưa có sản phẩm trong giỏ hàng.</p>";
