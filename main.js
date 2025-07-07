@@ -70,26 +70,25 @@ twotitleReturn.forEach(function (element) {
         <p><strong>Tên:</strong> ${receivedData.name}</p>
         <p><strong>Tin nhắn:</strong> ${receivedData.message}</p>
       `;
-*/
-window.addEventListener("cartItem", (event) => {
-  if (event.origin !== "https://thotrangcute.github.io/rimuro/") return;
-  const receivedData = event.data;
-  console.log(
-    "Dữ liệu nhận được từ https://thotrangcute.github.io/rimuro/ :",
-    receivedData
-  );
-  localStorage.setItem("receivedFromA", JSON.stringify(receivedData));
-  const hiddenProducts = document.getElementById("hiddenProducts");
-  hiddenProducts.innerHTML = `
+      window.addEventListener("cartItem", (event) => {
+        if (event.origin !== "https://thotrangcute.github.io/rimuro/") return;
+        const receivedData = event.data;
+        console.log(
+          "Dữ liệu nhận được từ https://thotrangcute.github.io/rimuro/ :",
+          receivedData
+        );
+        localStorage.setItem("receivedFromA", JSON.stringify(receivedData));
+        const hiddenProducts = document.getElementById("hiddenProducts");
+        hiddenProducts.innerHTML = `
       <div class="item-content">
       <img src="${receivedData.images}" alt="${receivedData.name}" class="cart-item-img" />
       <div class="cart-item-info">
       <h4>${receivedData.name}</h4>
       <p>${receivedData.price}</p>
       <div class="item-counter">
-          <button class="decrease">-</button>
-          <div class="value">${receivedData.quantity}</div>
-          <button class="increase">+</button>
+      <button class="decrease">-</button>
+      <div class="value">${receivedData.quantity}</div>
+      <button class="increase">+</button>
       </div>
       <div class="item-message"></div>
       </div>
@@ -98,5 +97,7 @@ window.addEventListener("cartItem", (event) => {
       </div>
 
       </div>
-  `;
-});
+      `;
+    });
+    */
+const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
