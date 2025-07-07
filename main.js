@@ -101,3 +101,23 @@ twotitleReturn.forEach(function (element) {
     });
     */
 const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+console.log(cartItems);
+const cartList = document.getElementById("cart-list");
+if (cartItems.length === 0) {
+  cartList.innerHTML = "<p>Chưa có sản phẩm trong giỏ hàng.</p>";
+} else {
+  cartList.innerHTML = cartItems
+    .map(
+      (item) => `
+    <div class="cart-item">
+      <img src="${item.images}" alt="${item.name}" />
+      <div>
+        <h4>${item.name}</h4>
+        <p>Giá: ${item.price}</p>
+        <p>Số lượng: ${item.quantity}</p>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
