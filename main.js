@@ -34,7 +34,7 @@ twotitleMuangay.addEventListener("click", function (e) {
 const twotitleReturn = document.querySelectorAll(".twotitle-return");
 twotitleReturn.forEach(function (element) {
   element.addEventListener("click", function () {
-    window.location.href = "https://thotrangcute.github.io/rimuro/";
+    window.location.href = "https://github.com/Hien0101/rimuro/tree/main";
   });
 });
 /*
@@ -60,7 +60,6 @@ if (cartItems.length === 0) {
     .join("");
 }
 */
-
 function getCartFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const cart = params.get("cart");
