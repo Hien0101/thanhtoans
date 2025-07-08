@@ -52,6 +52,33 @@ function getCartFromUrl() {
   }
   return [];
 }
+
+function renderCartList(cartItems) {
+  const cartList = document.getElementById("cart-list");
+  if (!cartItems.length) {
+    cartList.innerHTML = "<p>Chưa có sản phẩm trong giỏ hàng.</p>";
+    return;
+  }
+  cartList.innerHTML = cartItems
+    .map(
+      (item) => `
+    <div class="cart-item">
+      <img src="${item.images}" alt="${item.name}" />
+      <div>
+        <h4>${item.name}</h4>
+        <p>Giá: ${item.price}</p>
+        <p>Số lượng: ${item.quantity || 1}</p>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = getCartFromUrl();
+  renderCartList(cartItems);
+});
 console.log(getCartFromUrl());
 
 const cartItems = getCartFromUrl();
