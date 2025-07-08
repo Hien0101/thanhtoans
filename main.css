@@ -275,6 +275,74 @@
   text-decoration: underline;
   cursor: pointer;
 }
+.register-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.register-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 25%;
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.review {
+  height: 50px;
+  margin: 0 0 4% 0;
+}
+.resgister-login {
+  height: 50px;
+  width: 30%;
+}
+.driver-written {
+  margin: 0 0 5% 0;
+}
+.close-register {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.contetn-check {
+  display: flex;
+  align-items: center;
+}
+.check-out {
+  margin: 0 0 3% 3%;
+  font-size: 15px;
+}
+.fieerrersay {
+  display: flex;
+  margin: 0 0 3% 0;
+  font-size: 35px;
+  padding: 0;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+.fieerrersay.dark {
+  background: #222;
+  color: #fff;
+  border-radius: 34px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 20px;
+}
 @media (max-width: 600px) {
   .pay-money {
     flex-direction: column;

@@ -137,3 +137,114 @@ loginSubmit.addEventListener("click", function (e) {
   localStorage.setItem("username", username);
 });
 console.log(loginSubmit);
+/*
+const registerBtn = document.getElementById("registerBtn");
+const registerPopup = document.getElementById("registerPopup");
+const closeRegister = document.getElementById("closeRegister");
+
+// Hiển thị popup khi ấn "Đăng kí"
+registerBtn.addEventListener("click", () => {
+  registerPopup.style.display = "flex";
+});
+
+// Đóng popup khi ấn dấu ×
+closeRegister.addEventListener("click", () => {
+  registerPopup.style.display = "none";
+});
+
+// Đóng popup khi click ra ngoài form
+registerPopup.addEventListener("click", (e) => {
+  if (e.target === registerPopup) {
+    registerPopup.style.display = "none";
+  }
+});
+
+*/
+const secontionRevertime = document.querySelectorAll(".secontion-revertime");
+const registerPopup = document.getElementById("registerPopup");
+const closeRegister = document.getElementById("closeRegister");
+secontionRevertime.forEach(function (element) {
+  element.addEventListener("click", () => {
+    registerPopup.style.display = "flex";
+  });
+});
+closeRegister.addEventListener("click", () => {
+  registerPopup.style.display = "none";
+});
+
+registerPopup.addEventListener("click", (e) => {
+  if (e.target === registerPopup) {
+    registerPopup.style.display = "none";
+  }
+});
+const resgisterLogin = document.querySelector(".resgister-login");
+resgisterLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  const registerName = document.querySelector(".register-name");
+  const registerEmail = document.querySelector(".register-email");
+  const registerWrite = document.querySelector(".register-write");
+  const registerNumber = document.querySelector(".register-number");
+  const registerpass = document.querySelector(".register-pass");
+
+  const nameregis = registerName.value.trim();
+  const emailregis = registerEmail.value.trim();
+  const writeregis = registerWrite.value.trim();
+  const numberregis = registerNumber.value.trim();
+  const passregis = registerpass.value.trim();
+
+  const registerNameerror = document.querySelector(".register-name-error");
+  const registerEmailerror = document.querySelector(".register-email-error");
+  const registerWriteerror = document.querySelector(".register-write-error");
+  const registerNumbererror = document.querySelector(".register-number-error");
+  const registerPasserror = document.querySelector(".register-pass-error");
+
+  registerNameerror.textContent = "";
+  registerEmailerror.textContent = "";
+  registerWriteerror.textContent = "";
+  registerNumbererror.textContent = "";
+  registerPasserror.textContnet = "";
+
+  if (!nameregis) {
+    registerNameerror.textContent = "Vui lòng nhập thông tin têm bạn ";
+    return;
+  }
+  if (!emailregis) {
+    registerEmailerror.textContent = "Vui lòng nhập email của bạn  ";
+    return;
+  }
+  if (!writeregis) {
+    registerWriteerror.textContent = "Vui lòng nhập tên đăng nhập của bạn ";
+    return;
+  }
+  if (!numberregis) {
+    registerNumbererror.textContent = "Vui lòng nhập số điện thoại của bạn  ";
+    return;
+  }
+  if (!passregis) {
+    registerPasserror.textContnet = "Hãy nhập mật khẩu đủ 8 kí tự  ";
+    return;
+  }
+  alert("chúc mừng bạn đăng ký thành công");
+  location.reload();
+});
+/*
+const darkBtn = document.querySelector('.fieerrersay');
+
+// Khi load trang, kiểm tra trạng thái đã lưu
+if (localStorage.getItem('fieerrersay-dark') === 'true') {
+  darkBtn.classList.add('dark');
+}
+
+darkBtn.addEventListener('click', function () {
+  darkBtn.classList.toggle('dark');
+  localStorage.setItem('fieerrersay-dark', darkBtn.classList.contains('dark'));
+});*/
+const darkBtn = document.querySelector(".fieerrersay");
+if (localStorage.getItem("fieerrersay-dark") === "true") {
+  darkBtn.classList.add("dark");
+}
+
+darkBtn.addEventListener("click", function () {
+  darkBtn.classList.add("dark");
+  localStorage.setItem("fieerrersay-dark", darkBtn.classList.contains("dark"));
+});
