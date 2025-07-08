@@ -40,7 +40,7 @@ twotitleReturn.forEach(function (element) {
   });
 });
 
-function getCartFromUrl() {
+function getCartFromUrlOrLocal() {
   const params = new URLSearchParams(window.location.search);
   const cart = params.get("cart");
   if (cart) {
@@ -50,9 +50,12 @@ function getCartFromUrl() {
       return [];
     }
   }
-  return [];
+  try {
+    return JSON.parse(localStorage.getItem("cartItems") || "[]");
+  } catch (e) {
+    return [];
+  }
 }
-
 function renderCartList(cartItems) {
   const cartList = document.getElementById("cart-list");
   if (!cartList) return;
@@ -79,7 +82,7 @@ function renderCartList(cartItems) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const cartItems = getCartFromUrl();
+  const cartItems = getCartFromUrlOrLocal();
   renderCartList(cartItems);
 });
 
