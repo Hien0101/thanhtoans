@@ -36,7 +36,7 @@ twotitleMuangay.addEventListener("click", function (e) {
 const twotitleReturn = document.querySelectorAll(".twotitle-return");
 twotitleReturn.forEach(function (element) {
   element.addEventListener("click", function () {
-    window.location.href = "https://github.com/Hien0101/rimuro/tree/main";
+    window.location.href = "https://hien0101.github.io/rimuro/";
   });
 });
 
