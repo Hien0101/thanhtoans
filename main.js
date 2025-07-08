@@ -55,6 +55,7 @@ function getCartFromUrl() {
 
 function renderCartList(cartItems) {
   const cartList = document.getElementById("cart-list");
+  if (!cartList) return;
   if (!cartItems.length) {
     cartList.innerHTML = "<p>Chưa có sản phẩm trong giỏ hàng.</p>";
     return;
@@ -63,7 +64,9 @@ function renderCartList(cartItems) {
     .map(
       (item) => `
     <div class="cart-item">
-      <img src="${item.images}" alt="${item.name}" />
+      <img src="${item.images}" alt="${
+        item.name
+      }" style="width:60px;height:60px;object-fit:cover;" />
       <div>
         <h4>${item.name}</h4>
         <p>Giá: ${item.price}</p>
@@ -74,6 +77,11 @@ function renderCartList(cartItems) {
     )
     .join("");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = getCartFromUrl();
+  renderCartList(cartItems);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const cartItems = getCartFromUrl();
