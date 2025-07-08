@@ -80,27 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   renderCartList(cartItems);
 });
 console.log(getCartFromUrl());
-
-const cartItems = getCartFromUrl();
-const cartList = document.getElementById("cart-list");
-if (cartItems.length === 0) {
-  cartList.innerHTML = "<p>Chưa có sản phẩm trong giỏ hàng.</p>";
-} else {
-  cartList.innerHTML = cartItems
-    .map(
-      (item) => `
-    <div class="cart-item">
-      <img src="${item.images}" alt="${item.name}" />
-      <div>
-        <h4>${item.name}</h4>
-        <p>Giá: ${item.price}</p>
-        <p>Số lượng: ${item.quantity}</p>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-}
+console.log(cartList);
 const loginBtn = document.getElementById("loginButton");
 const savedUsername = localStorage.getItem("username");
 if (savedUsername) {
