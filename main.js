@@ -85,11 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartItems = getCartFromUrlOrLocal();
   renderCartList(cartItems);
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const cartItems = getCartFromUrl();
-  renderCartList(cartItems);
-});
 console.log(getCartFromUrl());
 
 const loginBtn = document.getElementById("loginButton");
