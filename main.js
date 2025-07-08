@@ -85,8 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartItems = getCartFromUrlOrLocal();
   renderCartList(cartItems);
 });
-console.log(getCartFromUrl());
-
 const loginBtn = document.getElementById("loginButton");
 const savedUsername = localStorage.getItem("username");
 if (savedUsername) {
