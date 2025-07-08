@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   renderCartList(cartItems);
 });
 console.log(getCartFromUrl());
-console.log(cartList);
+
 const loginBtn = document.getElementById("loginButton");
 const savedUsername = localStorage.getItem("username");
 if (savedUsername) {
