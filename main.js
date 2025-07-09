@@ -64,10 +64,12 @@ function renderCartList(cartItems) {
     return;
   }
   cartList.innerHTML = cartItems
-    .map(
-      (item) => `
+    .map((item) => {
+      const imageUrl =
+        item.images && item.images !== "" ? item.images : "default-image.webp";
+      return `
     <div class="cart-item">
-      <img src="${item.images}" alt="${item.name}"
+      <img src="${imageUrl}" alt="${item.name}"
       onerror="this.onerror=null;this.src='default-image.webp';"
       style="width:60px;height:60px;object-fit:cover;" />
       <div>
@@ -76,8 +78,8 @@ function renderCartList(cartItems) {
         <p>Số lượng: ${item.quantity || 1}</p>
       </div>
     </div>
-  `
-    )
+  `;
+    })
     .join("");
 }
 
