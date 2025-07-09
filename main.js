@@ -67,9 +67,9 @@ function renderCartList(cartItems) {
     .map(
       (item) => `
     <div class="cart-item">
-      <img src="${item.images}" alt="${
-        item.name
-      }" style="width:60px;height:60px;object-fit:cover;" />
+      <img src="${item.images}" alt="${item.name}"
+      onerror="this.onerror=null;this.src='default-image.webp';"
+      style="width:60px;height:60px;object-fit:cover;" />
       <div>
         <h4>${item.name}</h4>
         <p>Giá: ${item.price}</p>
