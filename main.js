@@ -65,12 +65,15 @@ function renderCartList(cartItems) {
   }
   cartList.innerHTML = cartItems
     .map((item) => {
+      // Nếu không có ảnh hoặc ảnh lỗi, dùng ảnh mặc định online
       const imageUrl =
-        item.images && item.images !== "" ? item.images : "default-image.webp";
+        item.images && item.images !== ""
+          ? item.images
+          : "https://via.placeholder.com/60x60?text=No+Image";
       return `
     <div class="cart-item">
       <img src="${imageUrl}" alt="${item.name}"
-      onerror="this.onerror=null;this.src='default-image.webp';"
+      onerror="this.onerror=null;this.src='https://via.placeholder.com/60x60?text=No+Image';"
       style="width:60px;height:60px;object-fit:cover;" />
       <div>
         <h4>${item.name}</h4>
