@@ -67,11 +67,11 @@ function renderCartList(cartItems) {
     .map((item) => {
       // Nếu không có ảnh hoặc ảnh lỗi, dùng ảnh mặc định local
       const imageUrl =
-        item.images && item.images !== "" ? item.images : "img/no-image.png";
+        item.images && item.images !== "" ? item.images : "./img/no-image.png";
       return `
     <div class="cart-item">
       <img src="${imageUrl}" alt="${item.name}"
-      onerror="this.onerror=null;this.src='img/no-image.png';"
+      onerror="this.onerror=null;this.src='./img/no-image.png';"
       style="width:60px;height:60px;object-fit:cover;" />
       <div>
         <h4>${item.name}</h4>
